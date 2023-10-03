@@ -1,0 +1,129 @@
+body{
+    font-family: 'Kanit', sans-serif;
+    background-color: #ffefd3;
+    color: #e0e1dd;
+    margin: 0;
+    padding: 0;
+}
+
+.fab, .fas{
+    margin-right: 10px;
+}
+/*----------------------------------------------------------------*/
+
+header{
+    background-color: #0d1b2a;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    width: 100%;
+    border-bottom: 5px solid #415a77;
+    border-top: 2px solid #0d1b2a;
+    z-index: 100;
+}
+
+header h1{
+    width: max-content;
+    text-shadow: -5px 5px 10px black;
+    font-size: 50px;
+    margin: auto 5px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.logo img{
+    width: 70px;
+    padding: 10px;
+}
+
+.header-button{
+    width: max-content;
+    display: flex;
+    margin-left: auto;
+}
+
+.header-button .rent{
+    font-size: 20px;
+    margin: 20px;
+}
+
+/*----------------------------------------------------------------*/
+
+main{
+    margin: 30px auto;
+    width: 85%;
+}
+.container{
+    font-size: 25px;
+
+    border: 5px solid #e0e1dd;
+    border-radius: 20px;
+
+    box-shadow: -5px 5px 10px #0d1b2a;
+    background-color: #415a77;
+
+    margin: 40px auto;
+}
+
+.con-title{
+    width: max-content;
+
+    margin: 20px auto;
+    padding: 0 20px;
+
+    text-shadow: -5px 5px 10px #0d1b2a;
+    border-bottom: 3px solid #e0e1dd;
+}
+
+/*----------------------------------------------------------------*/
+
+.about, .rent{
+    margin: 0 20px;
+    padding: 20px;
+
+    text-shadow: -5px 5px 10px #0d1b2a;
+    box-shadow: -5px 5px 10px #0d1b2a;
+    
+    font-size: 40px;
+    color: #e0e1dd;
+
+    border-radius: 30px;
+    border: 2px dashed #415a77;
+    background-color: #0d1b2a;
+    transition: all 0.20s;
+}
+
+.about:hover, .rent:hover{
+    background-color: #778da9;
+    box-shadow: 0px 0px 10px #ffefd3;
+    cursor: pointer;
+}
+
+.about:active, .rent:active{
+    background-color: #ffefd3;
+    box-shadow: 0px 0px 10px yellow;
+    color: #0d1b2a;
+}
+
+/*----------------------------------------------------------------*/
+
+footer{
+    display: flex;
+    background-color: #0d1b2a;
+    border-top: 5px solid #415a77;
+    border-bottom: 5px solid #0d1b2a;
+}
+
+.details{
+    margin-left: 20px;
+    font-size: 20px;
+}
