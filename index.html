@@ -9,108 +9,131 @@
     <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Josefin+Sans:wght@100&family=Kanit:wght@200&family=League+Spartan:wght@200&family=Montserrat:wght@200&family=Open+Sans:wght@300&family=Oswald:wght@200&family=Rowdies:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .jumbotron{
-            display: flex;
-            background-color: #415a77;
-            height: 700px;
-            border-bottom: 25x solid black;
-
-            background-image: url(assets/jumbo-img.png);
-            background-repeat: no-repeat;
-            background-position: right top;
+        .rent-title{
+            font-size: 70px;
+            padding: 0 50px;
+            border-bottom: 8px solid #e0e1dd;
         }
 
-        .jumbo-text{
-            position: relative;
-            display: flex;
-
-            width: 45%;
-            height: 100%;
-            
-            font-size: 50px;
-            text-shadow: -2px 2px 5px #0d1b2a;
-            padding-left: 40px;
+        .prices{
+            box-shadow: -5px 5px 10px #0d1b2a;
         }
 
-        .jumbo-text .text{
-            height: max-content;
-            margin: auto 0;
+        .prices, tr, td, th{
+            margin: 40px auto;
+            padding: 10px;
+            background-color: #526b8f;
         }
 
-        /*----------------------------------------------------*/
-
-        .intro{
+        tr, td, th{
             text-align: center;
+            border: 2px solid #e0e1dd;
         }
 
-        .records{
+        th{
+            font-size: 30px;
+            background-color: #6a84a8;
+        }
+
+
+        td ul{
+            text-align: left;
+        }
+
+        form{
+            width: 50%;
+            height: auto;
+
+            margin: auto;
+            padding: 20px;
+
+            background-color: #526b8f;
+            box-shadow: -5px 5px 10px #0d1b2a;
+            font-size: 30px;
+        }
+
+        form > div{margin: 30px 0;}
+
+        .form-container{
             display: flex;
-            width: 2000px;
-            height: 800px;
-            margin: 50px auto;
+            margin: 40px 40px;
         }
 
-        .records img{
-            transition: all 0.25s;
-            border: 8px #e0e1dd solid;
+        .form-container > *{margin: 0 auto;}
+
+        .form-img{
+            display: flex;
+            margin: auto;
+            width: 50%;
+        }
+
+        .form-img img{
+            width: 90%;
+            height: 47%;
+
+            margin: auto;
+
+            border: 10px solid #e0e1dd;
             border-radius: 20px;
             box-shadow: -5px 5px 10px #0d1b2a;
         }
 
-        .records img:hover{
-            border: 8px yellow solid;
-            box-shadow: 0px 0px 10px #ffefd3;
-        }
-
-        .middle{
-            display: flex;
-            flex-direction: row;
+        .form-subtitle{
             width: max-content;
-            height: 100%;
+
+            margin: 20px auto;
+            padding: 0 20px;
+
+            text-shadow: -5px 5px 10px #0d1b2a;
+            border-bottom: 3px solid #e0e1dd;
         }
 
-        .left, .right{
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            height: 100%;
-            margin: auto;
-        }
-
-        .left img, .right img{
+        .text-input{
             width: 90%;
-            height: 47%;
-            margin: auto;
+            height: 30px;
+            font-size: 20px;
         }
 
-        /*----------------------------------------------------*/
+        input{
+            width: 30px;
+            height: 30px;
+        }
 
-        .why{
+        .choices{transition: all 0.20s;}
+        .choices label:hover{text-shadow: 0px 0px 10px white;}
+        .column{margin-right: 20px;}
+
+        .row{
             display: flex;
-            flex-direction: row;
+            margin: 30px 0;
+            margin-bottom: 70px;
         }
 
-        .content-img{
-            height: 900px;
-            margin: 20px;
-        }
+        .row > *{margin: 0 auto;}
 
-        .content-img img{
-            height: 100%;
+        .row > div{width: 47%;}
+
+        .submit-button{
+            background-color: #0d1b2a;
+            color: #e0e1dd;
+            width: 300px;
+            height: 80px;
             border-radius: 20px;
-            box-shadow: -2px 2px 5px #0d1b2a;
+            border: 5px solid #6a84a8;
+            box-shadow: -5px 5px 10px #0d1b2a;
+            font-size: 20px;
         }
 
-        .content-desc{
-            height: max-content;
+        .submit-button:hover{
+            background-color: #e0e1dd;
+            border: 5px solid #0d1b2a;
+            color: #0d1b2a;
+            box-shadow: 0px 0px 10px yellow;
         }
 
-        .buttons{
+        .submit{
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: auto;
-            margin: auto 0;
         }
     </style>
     <title>Rent-An-Alex</title>
@@ -121,61 +144,250 @@
             <img src="assets/logo.png" alt="">
             <h1>Rent-An-Alex</h1>
         </div>
-        <div class="header-button">
-            <button onclick="location.href = 'rent.html';" class="rent">Rent-an-Alex Now!</button>
-        </div>
     </header>
-    <section class="jumbotron">
-        <div class="jumbo-text">
-            <div class="text">
-                <h2 style="margin-top:0; border-bottom: 5px solid white;">Hello! I'm Alexander</h2>
-                <p style="margin-bottom:0;">...and I will be your companion for anything :D<br>Brother, Daddy, Boyfriend, etc.</p>
-            </div>
-        </div>
-    </section>
     <main>
-        <section class="container intro">
-            <h1 class="con-title">❔ What is Rent-An-Alex ❔</h1>
-            <p style="margin: 20px;">Hello There! I'm Alexander, Founder and currently the only employee of Rent-An-Alex.<br>Rent-An-Alex is an opportunity for anyone to have a companion. In this website, you can request me, Alexander, to be whatever you want me to be as company for a given time. Whether you want me to be your servant, mentor, brother, boyfriend, or even be the father you never had, I will always be inclined to accompany you. If you wish to have me as anyone you could possibly wish for, you could go through this website and enter a bit about yourself so that I know how to satisfy you. I am always looking forward to help you out as best as I possibly can.</p>
+        <section class="container">
+            <h1 class="con-title rent-title">💙💙💙 LET'S RENT-AN-ALEX 💙💙💙</h1>
         </section>
         <section class="container">
-            <h1 class="con-title">🥳 Rent-An-Alex Memories 🥳</h1>
-            <div class="records">
-                <div class="left">
-                    <img src="assets/records/pic1.jpg" alt="">
-                    <img src="assets/records/pic3.jpg" alt="">
+            <h1 class="con-title">💵 PRICES 💵</h1>
+            <table class="prices">
+                <tr>
+                    <th rowspan="2">Pack</th>
+                    <th colspan="2">Time</th>
+                    <th rowspan="2">Price</th>
+                    <th rowspan="2">Perks</th>
+                </tr>
+                <tr>
+                    <th>Duration</th>
+                    <th>Period</th>
+                </tr>
+                <div class="pack">
+                    <tr>
+                        <td rowspan="3">Going Out with Alex (GO Pack)</td>
+                        <td rowspan="3">7 days</td>
+                        <td>8 hours / day</td>
+                        <td>Rp200.000,-</td>
+                        <td rowspan="3">
+                            <ul>
+                                <li>Get to know Alex</li>
+                                <li>Have Alex as a friend and chat as much as you want</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12 hours / day</td>
+                        <td>Rp250.000,-</td>
+                    </tr>
+                    <tr>
+                        <td>24 hours / day</td>
+                        <td>Rp350.000,-</td>
+                    </tr>
                 </div>
-                <div class="middle">
-                    <img src="assets/records/pic5.jpg" class="tall">
+                <div class="pack">
+                    <tr>
+                        <td rowspan="3">Hanging Out with Alex (HO Pack)</td>
+                        <td rowspan="3">30 days</td>
+                        <td>8 hours / day</td>
+                        <td>Rp500.000,-</td>
+                        <td rowspan="3">
+                            <ul>
+                                <li>Get to know Alex</li>
+                                <li>Have Alex as a friend, gym bro, or best friend</li>
+                                <li>Get Alex to be yor teacher/mentor to help you with work and/or studies</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12 hours / day</td>
+                        <td>Rp600.000,-</td>
+                    </tr>
+                    <tr>
+                        <td>24 hours / day</td>
+                        <td>Rp750.000,-</td>
+                    </tr>
                 </div>
-                <div class="right">
-                    <img src="assets/records/pic2.jpg" alt="">
-                    <img src="assets/records/pic4.jpg" alt="">
+                <div class="pack">
+                    <tr>
+                        <td rowspan="3">Best Friends with Alex (BF Pack)</td>
+                        <td rowspan="3">6 months</td>
+                        <td>8 hours / day</td>
+                        <td>Rp1.000.000,-</td>
+                        <td rowspan="3">
+                            <ul>
+                                <li>Get to know Alex</li>
+                                <li>Have Alex as a friend, gym bro, best friend, or boyfriend</li>
+                                <li>Get Alex to be yor teacher/mentor to help you with work and/or studies</li>
+                                <li>Make Alex your servant, Get things and help you out at your command</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12 hours / day</td>
+                        <td>Rp1.500.000,-</td>
+                    </tr>
+                    <tr>
+                        <td>24 hours / day</td>
+                        <td>Rp2.000.000,-</td>
+                    </tr>
                 </div>
-            </div>
+                <div class="pack">
+                    <tr>
+                        <td rowspan="3">Living Together with Alex (Fam Pack)</td>
+                        <td rowspan="3">1 year</td>
+                        <td>8 hours / day</td>
+                        <td>Rp3.000,000-</td>
+                        <td rowspan="3">
+                            <ul>
+                                <li>Get to know Alex</li>
+                                <li>Have Alex as a friend, gym bro, best friend, or boyfriend</li>
+                                <li>Get Alex to be yor teacher/mentor to help you with work and/or studies</li>
+                                <li>Make Alex your servant, Get things and help you out at your command</li>
+                                <li>Be given care like a family member with Alex (have Alex as brother, uncle, or even father)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12 hours / day</td>
+                        <td>Rp4.500,000,-</td>
+                    </tr>
+                    <tr>
+                        <td>24 hours / day</td>
+                        <td>Rp6.000.000,-</td>
+                    </tr>
+                </div>
+            </table>
         </section>
-        <section class="container why">
-            <div class="content-img">
-                <img src="assets/why.jpg" alt="">
-            </div>
-            <div class="content-main" style="margin: 0 20px;">
-                <div class="content-desc">
-                    <h1 class="con-title">🤔 Why Rent-An-Alex 🤔</h1>
-                    <p>In today's day and age, A lot of people struggle to find a companion that is loyal and reliable to them whenever they need it. With a lot of distrust, cruelty, and insecurity, these people find it hard to have anyone as their friend or loyal companion. Not to mention that with the power of having a computer on the palm of our hands has made us enter the virtual world making virtual friends, but never even get to see them in person. Long term indulgence in the virtual world can make us feel isolated and oblivious to the real world. That is then worsened with the fact that even in the virtual world people can be more distrustful and dangerous with the presence of cyberbullying.
-                        <br><br>
-                        With that in mind, Rent-An-Alex aims to be the antidote to the isolation and insecurity that people constantly face. How to do it? By having a man to be of service to his clients by any means. I, Alexander, the person behind Rent-An-Alex, wish to spread the love and social awareness to people that other people can be trusted and be made friends because even I could befriend strangers such as my clients and vice versa. Though online service of Rent-An-Alex is available, the effect of this love and passion can only be best shared through face-to-face interaction as virtual interaction can never beat the real thing.
-                    </p>
-                    <h3>In short, by 'renting an Alex', you could experience these benefits:</h3>
-                    <ul>
-                        <li>Have a companion to serve as anyone you wish to be (A friend, romantic partner, family member, gym bro, etc.)</li>
-                        <li>Build social skills to integrate into the real world with other people</li>
-                        <li>Help you out in difficult times</li>
-                    </ul>
+        <section class="container">
+            <h1 class="con-title">📄 Rent Form 📄</h1>
+            <div class="form-container">
+                <div class="form-img">
+                    <img src="assets/form-img1.jpg">
                 </div>
-                <div class="buttons">
-                    <!-- <button class="about">Know more about Alex!</button> -->
-                    <button onclick="location.href = 'rent.html';" class="rent">I would like to Rent-an-Alex</button>
-                </div>
+                <form action="invoice.html">
+                    <fieldset style="margin: auto;">
+                        <legend> Rent-an-Alex Form </legend>
+                        <h3 class="form-subtitle">I want to know a bit about yourself!</h3>
+                        <div class="row">
+                            <div class="text">
+                                <label for="name"><b>Name</b></label>
+                                <br>
+                                <input type="text" name="name" class="text-input" id="name" required>
+                                <br>
+                                <label for="email"><b>Email</b></label>
+                                <br>
+                                <input type="email" name="email" class="text-input" id="email" required>
+                                <br>
+                                <label for="address"><b>Address</b></label>
+                                <br>
+                                <input type="text" name="address" class="text-input" id="address" required>
+                            </div>
+                            <div class="choices">
+                                <label><b>Gender</b></label>
+                                <div class="radio">
+                                    <input type="radio" name="gender" id="gender" value="Male" checked>
+                                    <label for="gender">Male</label>
+                                    <br>
+                                    <input type="radio" name="gender" id='gender' value="Female">
+                                    <label for="gender">Female</label>
+                                </div>
+                                <br>
+                                <div class="number">
+                                    <label for="age"><b>Age</b></label>
+                                    <input id='age' type="number" min="1" max="100" name="age" style="width:80px;" required>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="form-subtitle">How would we have fun?</h3>
+                        <div class="row">
+                            <div class="radio-pack">
+                                <label><b>Choose your pack</b></label>
+                                <div class="choices">
+                                    <input type="radio" name="pack" value="GO" checked>
+                                    <label for="pack">GO Pack</label>
+                                    <br>
+                                    <input type="radio" name="pack" value="HO">
+                                    <label for="pack">HO Pack</label>
+                                    <br>
+                                    <input type="radio" name="pack" value="BF">
+                                    <label for="pack">BF Pack</label>
+                                    <br>
+                                    <input type="radio" name="pack" value="FAM">
+                                    <label for="pack">FAM Pack</label>
+                                </div>
+                            </div>
+                            <div class="radio-period">
+                                <label><b>Choose availability period</b></label>
+                                <div class="choices">
+                                    <input type="radio" name="period" value="8hr" checked>
+                                    <label for="period">8 Hours / Day</label>
+                                    <br>
+                                    <input type="radio" name="period" value="12hr">
+                                    <label for="period">12 Hours / Day</label>
+                                    <br>
+                                    <input type="radio" name="period" value="24hr">
+                                    <label for="period">24 Hours / Day</label>
+                                </div>
+                            </div>
+                            <div class="radio-interaction">
+                                <label><b>Choose method of interaction</b></label>
+                                <div class="choices">
+                                    <input type="radio" name="inter" value="Offline" checked>
+                                    <label for="period">Offline (+Rp50.000 / hr)</label>
+                                    <br>
+                                    <input type="radio" name="inter" value="Online">
+                                    <label for="period">Online</label>
+                                </div>
+                            </div>
+                            <div class="start-date">
+                                <label for="date">When do you want to start our interaction?</label>
+                                <input type="date" style="width:100%" required>
+                            </div>
+                        </div>
+                        <h3 class="form-subtitle">Lastly, let's see what you want to experience from me!</h3>
+                        <div class="row">
+                            <div class="checkbox">
+                                <label><b>How do you want Alex to be?</b></label>
+                                <div class="choices" style="display:flex;">
+                                    <div class="column">
+                                        <input type="checkbox" name="personality" value="gentle">
+                                        <label for="personality">Gentle</label>
+                                        <br>
+                                        <input type="checkbox" name="personality" value="crazy">
+                                        <label for="personality">Crazy</label>
+                                        <br>
+                                        <input type="checkbox" name="personality" value="funny">
+                                        <label for="personality">Funny</label>
+                                        <br>
+                                        <input type="checkbox" name="personality" value="serious">
+                                        <label for="personality">Serious</label>
+                                    </div>
+                                    <div class="column">
+                                        <input type="checkbox" name="personality" value="young">
+                                        <label for="personality">Young</label>
+                                        <br>
+                                        <input type="checkbox" name="personality" value="mature">
+                                        <label for="personality">Mature</label>
+                                        <br>
+                                        <input type="checkbox" name="personality" value="cuddly">
+                                        <label for="personality">Cuddly</label>
+                                        <br>
+                                        <input type="checkbox" name="personality" value="normal">
+                                        <label for="personality">Normal</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <label for="message"><b>Leave a message for Alex to read!</b></label>
+                                <br>
+                                <textarea name="message" id="message" cols="40" rows="10" type="text"></textarea>
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" id="submit" value="Submit and Rent-an-Alex!" class="submit-button">
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </section>
     </main>
@@ -191,4 +403,19 @@
         </div>
     </footer>
 </body>
+<script>
+    var btn = document.getElementById('submit')
+
+    btn.addEventListener('click', function()
+    {
+        localStorage.setItem('name', document.getElementById('name').value)
+        localStorage.setItem('email', document.getElementById('email').value)
+        localStorage.setItem('address', document.getElementById('address').value)
+        localStorage.setItem('gender', document.querySelector('input[name="gender"]:checked').value)
+        localStorage.setItem('age', document.getElementById('age').value)
+        localStorage.setItem('pack', document.querySelector('input[name="pack"]:checked').value)
+        localStorage.setItem('period', document.querySelector('input[name="period"]:checked').value)
+        localStorage.setItem('inter', document.querySelector('input[name="inter"]:checked').value)
+    })
+</script>
 </html>
